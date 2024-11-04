@@ -14,7 +14,6 @@ public class StartCommand implements Callable<Integer> {
   public Integer call() throws Exception {
     log.info("What up from start");
     ManagementServer.startAsHttpServer();
-//    ProxyServer.main();
     return 0;
   }
 }

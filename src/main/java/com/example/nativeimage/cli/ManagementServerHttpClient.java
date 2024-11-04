@@ -21,7 +21,7 @@ public abstract class ManagementServerHttpClient {
           .uri(URI.create("http://localhost:8900"));
       requestConfigurer.accept(request);
       HttpResponse<String> response = httpClient.send(request.build(), HttpResponse.BodyHandlers.ofString());
-      log.info("Response from ProxyServer: {}", response.body());
+      log.info("Response: {}", response.body());
     }
   }
 

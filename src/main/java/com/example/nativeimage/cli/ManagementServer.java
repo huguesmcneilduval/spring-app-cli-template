@@ -12,7 +12,7 @@ import java.util.Optional;
 import java.util.concurrent.CountDownLatch;
 
 /**
- * Web Server as endpoint to start/stop/restart/status ProxyServer
+ * Web Server as endpoint to start/stop/restart/status
  */
 @RequiredArgsConstructor
 @Slf4j

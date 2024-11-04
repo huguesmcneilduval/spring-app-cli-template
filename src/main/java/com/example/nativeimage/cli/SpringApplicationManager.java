@@ -9,13 +9,13 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.ConfigurableApplicationContext;
 
 /**
- * Utility class that wrap the ProxyServer
+ * Utility class that wrap a Spring application
  */
 //@Component
 @Slf4j
 @RequiredArgsConstructor(access = AccessLevel.PRIVATE)
 public class SpringApplicationManager {
-  private  final SpringApplication proxyServer;
+  private  final SpringApplication springApplication;
   private  ConfigurableApplicationContext context;
 
   public static SpringApplicationManager create(String... args) {
@@ -29,7 +29,7 @@ public class SpringApplicationManager {
   public  void start() {
     if (!isRunning()) {
       log.info("Starting Proxy Server...");
-      context = proxyServer.run();
+      context = springApplication.run();
       log.info("Proxy Server started");
     }
   }
